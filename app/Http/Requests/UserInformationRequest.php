@@ -27,10 +27,10 @@ class UserInformationRequest extends FormRequest
                 'required',
                 'string',
                 'min:8',
-                'regex:/[A-Z]/',    // must contain at least one uppercase letter
-                'regex:/[a-z]/',    // must contain at least one lowercase letter
-                'regex:/[0-9]/',    // must contain at least one number
-                'regex:/[!@#$%^&*(),.?":{}|<>]/', // must contain at least one special character
+                // 'regex:/[A-Z]/',    // must contain at least one uppercase letter
+                // 'regex:/[a-z]/',    // must contain at least one lowercase letter
+                // 'regex:/[0-9]/',    // must contain at least one number
+                // 'regex:/[!@#$%^&*(),.?":{}|<>]/', // must contain at least one special character
             ],
 
         ];

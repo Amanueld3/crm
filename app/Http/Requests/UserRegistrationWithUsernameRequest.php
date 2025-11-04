@@ -27,7 +27,7 @@ class UserRegistrationWithUsernameRequest extends FormRequest
             'phone' => 'nullable|unique:users,phone',
             'email' => 'required|email|unique:users,email',
             'username' => 'nullable|string|unique:users,username',
-            'roles' => 'required|array',
+            // 'roles' => 'required|array',
         ]);
     }
 }

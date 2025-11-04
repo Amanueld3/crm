@@ -79,8 +79,7 @@ class UserController extends AuthController
      */
     public function store(UserRegistrationWithUsernameRequest $request)
     {
-
-        Gate::authorize('create', User::class);
+        // Gate::authorize('create', User::class);
 
         DB::beginTransaction();
 
@@ -89,7 +88,6 @@ class UserController extends AuthController
             'email' => $request->email,
             'username' => $this->generateUniqueUsername($request->name),
             'password' => Hash::make($request->password),
-
         ]);
 
         if ($request->has('roles')) {

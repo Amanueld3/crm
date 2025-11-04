@@ -9,7 +9,6 @@ use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\RolePermissionController;
 use App\Http\Controllers\UserController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,6 +16,7 @@ Route::group([
     'middleware' => 'api',
 ], function () {
     Route::post('login', [AuthController::class, 'login']);
+    Route::post('register', [UserController::class, 'store']);
 
     // Route::post('update-device-token', [FcmController::class, 'updateDeviceToken']);
 
